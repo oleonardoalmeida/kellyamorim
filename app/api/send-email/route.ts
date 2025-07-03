@@ -8,18 +8,18 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { name, email, phone, subject, message } = body
 
-    // Validação básica
+    // Basic validation
     if (!name || !email || !message) {
       return NextResponse.json({ error: "Nome, e-mail e mensagem são obrigatórios" }, { status: 400 })
     }
 
-    // Validação de e-mail
+    // Email Validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       return NextResponse.json({ error: "E-mail inválido" }, { status: 400 })
     }
 
-    // Template do e-mail
+    // Email tamplate
     const emailHtml = `
       <!DOCTYPE html>
       <html>
@@ -94,8 +94,8 @@ export async function POST(request: NextRequest) {
 
     // Enviar e-mail
     const { data, error } = await resend.emails.send({
-      from: "Contato Kelly Amorim <contato@kellyamorim.com.br>", // Substitua pelo seu domínio verificado
-      to: ["kelly.amorim@kellyamorim.com.br"], // Seu e-mail de destino
+      from: "Contato Kelly Amorim <contato@kellyamorim.com.br>",
+      to: ["kelly.amorim@kellyamorim.com.br"],
       subject: `Nova mensagem do site: ${subject || "Contato"}`,
       html: emailHtml,
       reply_to: email,
@@ -116,7 +116,7 @@ export async function POST(request: NextRequest) {
       {
         success: true,
         message: "E-mail enviado com sucesso!",
-        emailId: data?.id, // Corrigido: data?.id em vez de data.id
+        emailId: data?.id,
       },
       { status: 200 },
     )

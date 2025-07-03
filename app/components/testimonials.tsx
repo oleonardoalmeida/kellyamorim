@@ -7,25 +7,25 @@ import { Star, Quote } from "lucide-react"
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Miguel Leonardo",
+      name: "M. L.",
       age: 32,
       text: "O atendimento da Dra. Kelly foi excepcional. Desde a primeira sessão, senti-me acolhido, ouvido e respeitado. Sua escuta atenta, empática e profissionalismo fizeram toda a diferença no meu processo de autoconhecimento e superação. Recomendo com total confiança!",
       rating: 5,
     },
     {
-      name: "José Vitor",
+      name: "J. V.",
       age: 28,
       text: "A melhor psicologa! Cada sessão é uma reflexão e um insight diferente. Quando comecei o atendimento há 2 anos, nunca achei que estaria bem do jeito que estou hoje e, com a ajuda dela, a cada dia mais estou evoluindo e me entendendo melhor!",
       rating: 5,
     },
     {
-      name: "Yuri Morais",
+      name: "Y. M.",
       age: 45,
       text: "Encontrar Kelly como profissional foi um divisor de águas, eu não tinha o hábito de partilhar ou vontade de tratar a mente, hoje a terapia é atividade significativa na minha construção pessoal. Kelly é uma excelente profissional, extremamente competente e interativa!",
       rating: 5,
     },
     {
-      name: "Viviane Araujo",
+      name: "V. A.",
       age: 35,
       text: "Conheci a Kelly através de uma postagem no Instagram de uma 3ª pessoa. Mandei mensagem questionando de como era a terapia, ela sanou todas as minhas dúvidas e marcamos nossa primeira sessão.E que sessão maravilhosa, acolhedora, paciente, e carinhosa.",
       rating: 5,

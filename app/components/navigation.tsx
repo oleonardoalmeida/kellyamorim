@@ -36,13 +36,11 @@ export default function Navigation() {
     setIsOpen(false)
     setTimeout(() => {
       if (href === "#inicio") {
-        // Para o link "Início", role até o topo absoluto
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         })
       } else {
-        // Para outros links, use o comportamento normal
         const element = document.querySelector(href)
         if (element) {
           element.scrollIntoView({ behavior: "smooth" })
@@ -55,14 +53,14 @@ export default function Navigation() {
   const getButtonConfig = () => {
     if (isTablet) {
       return {
-        padding: "px-2 py-1.5", // Menor para tablet
-        fontSize: "text-xs", // Menor para tablet
+        padding: "px-2 py-1.5",
+        fontSize: "text-xs",
         text: "Agendar",
       }
     } else {
       return {
-        padding: "px-4 py-2", // Normal para desktop
-        fontSize: "text-sm", // Normal para desktop
+        padding: "px-4 py-2",
+        fontSize: "text-sm",
         text: "Agendar Consulta",
       }
     }
@@ -108,7 +106,6 @@ export default function Navigation() {
             Kelly Amorim
           </motion.div>
 
-          {/* MENU DESKTOP E TABLET */}
           {mounted && !isMobile && (
             <div className="flex items-center gap-8">
               {navItems.map((item, index) => (
@@ -137,7 +134,6 @@ export default function Navigation() {
             </div>
           )}
 
-          {/* BOTÃO MOBILE */}
           {mounted && isMobile && (
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
@@ -151,7 +147,6 @@ export default function Navigation() {
         </div>
       </motion.nav>
 
-      {/* MENU MOBILE */}
       <AnimatePresence>
         {mounted && isMobile && isOpen && (
           <motion.div

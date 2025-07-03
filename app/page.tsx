@@ -18,13 +18,10 @@ export default function Home() {
 
   return (
     <div>
-      {/* ID "inicio" no topo absoluto da página */}
       <div id="inicio" className="absolute top-0 left-0 w-full"></div>
 
-      {/* NAVIGATION SEMPRE NO TOPO */}
       <Navigation />
 
-      {/* CONTEÚDO PRINCIPAL COM ID PARA BLUR */}
       <div id="main-content" style={{ paddingTop: "64px" }}>
         <Hero />
         <About />

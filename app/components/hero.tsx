@@ -53,15 +53,15 @@ export default function Hero() {
   const getPhotoConfig = () => {
     if (isMobile) {
       return {
-        width: "260px", // Reduzido
-        height: "320px", // Reduzido
-        containerClass: "flex justify-center mb-4", // Margem menor
+        width: "260px",
+        height: "320px",
+        containerClass: "flex justify-center mb-4",
       }
     } else if (isTablet) {
       return {
         width: "320px",
         height: "400px",
-        containerClass: "flex justify-center", // Mudou de justify-end para justify-center
+        containerClass: "flex justify-center",
       }
     } else {
       return {
@@ -77,20 +77,17 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 px-4 relative">
       <div className="container mx-auto">
-        {/* 🎯 LAYOUT MOBILE OTIMIZADO */}
         <div
           className={`${isMobile ? "flex flex-col items-center space-y-6" : "grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"}`}
         >
-          {/* 🎯 FOTO PRIMEIRO NO MOBILE */}
           <div className={`${isMobile ? "order-1 w-full" : "order-1 lg:order-2"} ${photoConfig.containerClass}`}>
             <motion.div
               className="hero-photo relative"
               style={{
                 width: photoConfig.width,
                 height: photoConfig.height,
-                zIndex: 1, // Z-index baixo para não interferir no menu
+                zIndex: 1,
               }}
-              // 🎯 ANIMAÇÃO DE ENTRADA ESPETACULAR
               initial={{
                 opacity: 0,
                 scale: 0.3,
@@ -219,7 +216,6 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* 🎯 CONTEÚDO TEXTO - APROXIMADO NO MOBILE */}
           <motion.div
             className={`text-center lg:text-left ${isMobile ? "order-2 w-full px-4" : "order-2 lg:order-1 w-full mt-80 md:mt-0"}`}
             initial={{ opacity: 0 }}

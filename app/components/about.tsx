@@ -63,7 +63,7 @@ export default function About() {
       return {
         width: "350px",
         height: "420px",
-        containerClass: "flex justify-center", // Centralizado no tablet
+        containerClass: "flex justify-center",
       }
     } else {
       return {
@@ -105,7 +105,6 @@ export default function About() {
                 width: photoConfig.width,
                 height: photoConfig.height,
               }}
-              // 🎯 ANIMAÇÃO DE ENTRADA DIFERENTE - SLIDE + FADE
               initial={{
                 opacity: 0,
                 x: isMobile ? 0 : 150,
