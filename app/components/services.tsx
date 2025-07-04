@@ -10,11 +10,19 @@ export default function Services() {
   const services = [
     {
       icon: Brain,
-      title: "Terapia Individual",
+      title: "Terapia Individual (Online)",
       description: "Sessões personalizadas para tratar ansiedade, depressão, fobias e outros transtornos emocionais.",
       duration: "50 minutos",
-      price: "R$ 150",
+      price: "R$ 120",
       features: ["Avaliação inicial", "Plano terapêutico", "Técnicas de TCC", "Acompanhamento contínuo"],
+    },
+    {
+      icon: Zap,
+      title: "Terapia Individual (Presencial)",
+      description: "Atendimento psicológico por videoconferência com a mesma qualidade do presencial.",
+      duration: "50 minutos",
+      price: "R$ 150",
+      features: ["Plataforma segura", "Flexibilidade de horários", "Mesma eficácia", "Conforto de casa"],
     },
     {
       icon: Heart,
@@ -23,22 +31,6 @@ export default function Services() {
       duration: "60 minutos",
       price: "R$ 200",
       features: ["Dinâmica relacional", "Comunicação assertiva", "Resolução de conflitos", "Planejamento conjunto"],
-    },
-    {
-      icon: Users,
-      title: "Terapia Familiar",
-      description: "Harmonização das relações familiares e melhoria da dinâmica entre os membros.",
-      duration: "60 minutos",
-      price: "R$ 180",
-      features: ["Análise sistêmica", "Mediação familiar", "Estabelecimento de limites", "Comunicação familiar"],
-    },
-    {
-      icon: Zap,
-      title: "Sessões Online",
-      description: "Atendimento psicológico por videoconferência com a mesma qualidade do presencial.",
-      duration: "50 minutos",
-      price: "R$ 130",
-      features: ["Plataforma segura", "Flexibilidade de horários", "Mesma eficácia", "Conforto de casa"],
     },
   ]
 
